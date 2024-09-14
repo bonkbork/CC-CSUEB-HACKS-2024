@@ -1,10 +1,15 @@
+body{
+  background-image: url(images/bear.png);
+  background-size:cover;
+}
+
 #chatbox {
-    width: 300px;
-    height: 400px;
+    width: 50vh;
+    height: 15vh;
     border: 1px solid #ccc; 
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    top: 100px;
+    right: 100px;
     background-color: white;
     display: flex;
     flex-direction: column;
