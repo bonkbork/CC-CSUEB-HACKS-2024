@@ -5,23 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbox</title>
   <link rel="stylesheet" href="welcome.css">
-  <script src="welcome.js"></script>
+  <!--<script src="welcome.js"></script>-->
 </head>
 <body>
-
-  <div id="largeText">
-    <h1>
-      How are you feeling today?
-    </h1>
+  <div id="wrapperLarge">
+    <div id="largeText">
+        How are you feeling today?
+    </div>
   </div>
-
-  <div id="chatbox">
-    <div id="messages"></div>
     <div id="input-area">
       <input type="text" id="input" placeholder="Type your message">
       <button onclick="sendMessage()">Send</button>
     </div>
+
+  <div id="chatbox">
+    <div id="messages"></div>
   </div>
+
+  <script>
+    const messages = document.getElementById('messages');
+
+function sendMessage() {
+  const input = document.getElementById('input');
+  const userMessage = input.value;
+
+  // Add user message to the chat
+  // const userDiv = document.createElement('div');
+  // userDiv.classList.add('message', 'user');
+  // userDiv.innerText = userMessage;
+  // messages.appendChild(userDiv);
+
+  // Clear the input field
+  input.value = '';
+
+  // Simulate bot response
+  setTimeout(() => {
+    const botDiv = document.createElement('div');
+    botDiv.classList.add('message', 'bot');
+    botDiv.innerText = 'Hoor hoor hoor hoor hoor hoor hoor hoor';
+    messages.appendChild(botDiv);
+
+    // Scroll to the bottom
+    messages.scrollTop = messages.scrollHeight;
+  }, 1000);
+}
+  </script>
 
 </body>
 </html>

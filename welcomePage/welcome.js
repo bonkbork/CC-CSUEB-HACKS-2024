@@ -1,3 +1,4 @@
+// Leaving this part out because it does not work
 const messages = document.getElementById('messages');
 
     function sendMessage() {
@@ -5,10 +6,10 @@ const messages = document.getElementById('messages');
       const userMessage = input.value;
 
       // Add user message to the chat
-      const userDiv = document.createElement('div');
-      userDiv.classList.add('message', 'user');
-      userDiv.innerText = userMessage;
-      messages.appendChild(userDiv);
+    //   const userDiv = document.createElement('div');
+    //   userDiv.classList.add('message', 'user');
+    //   userDiv.innerText = userMessage;
+    //   messages.appendChild(userDiv);
 
       // Clear the input field
       input.value = '';
