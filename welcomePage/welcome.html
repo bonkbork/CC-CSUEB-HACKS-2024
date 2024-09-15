@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbox</title>
+  <title>Therapy Bear</title>
+  <link rel="icon" href="images/bearClaw.png"></link>
   <link rel="stylesheet" href="welcome.css">
-  <!--<script src="welcome.js"></script>-->
 </head>
 <body>
 
   <div class="popup-overlay" id="popup">
     <div class="popup-box">
-      <h2>Welcome to Safe Cave</h2>
-      <p> This is Alex, the big brown grizzly bear. The wisest, kindest bear ready to listen and support. 
-        Alex does not judge and only offeres support, he is here to help. Most of all! Alex is not a rat, you are safe here. 
+      <h2>Welcome to Therapy Bear's Safe Cave</h2>
+      <p> This is Therpay Bear. The wisest, kindest bear ready to listen and support. 
+        Therpay Bear does not judge and only offeres support, he is here to help. 
         Please ask him anything on your mind, and he will try his very best to be supportive and helpful!
+        Therapy Bear is of course an AI bear, his advidce may be wrong and when dealing with serious issues 
+        please consult with an expert and take Therapy Bear's advice with a grain of salt.
       </p>
       <button class="close-popup" id="close-popup">I Understand</button>
     </div>
   </div>
-  <div id="space"></div>
+  <div id="space"></div> <!--This is just here to take up space to push input down -B -->
     <div id="input-area">
-      <input type="text" id="input" placeholder="Ask Alex anything">
+      <input type="text" id="input" placeholder="Ask Therapy Bear anything on your mind">
       <button onclick="sendMessage()">Send</button>
     </div>
 
@@ -30,7 +32,6 @@
   </div>
 
   <script>
-
 const popup = document.getElementById('popup');
     const closePopup = document.getElementById('close-popup');
 
@@ -46,15 +47,16 @@ const popup = document.getElementById('popup');
 
     const messages = document.getElementById('messages');
 
+    
+
+    var alrHappened = false; // created boolean function alrHappened outside of functions to keep its value, also here to allow for change in prompt -B
+
 function sendMessage() {
+  setTimeout(() => {      // set this messages.innerHTML part here to get rid of existing text when new prompt drawn -B
+    messages.innerHTML = "\n";
+  }, 700);
   const input = document.getElementById('input');
   const userMessage = input.value;
-
-  // Add user message to the chat
-  // const userDiv = document.createElement('div');
-  // userDiv.classList.add('message', 'user');
-  // userDiv.innerText = userMessage;
-  // messages.appendChild(userDiv);
 
   // Clear the input field
   input.value = '';
@@ -63,12 +65,20 @@ function sendMessage() {
   setTimeout(() => {
     const botDiv = document.createElement('div');
     botDiv.classList.add('message', 'bot');
-    botDiv.innerText = 'Hoor hoor hoor hoor hoor hoor hoor hoor';
+    if(alrHappened){  //condition statements to go through two different responses to show what AI would look like -B
+      botDiv.innerText = 'I have not been trained to answer that yet';
+      alrHappened = false;
+    }
+    else{ //condition statements to go through two different responses to show what AI would look like -B (runs when alrHappened = false)
+      botDiv.innerText = "Mmmm I love honey, and extra words to show that it stays within limit. Did you know brown bears can live 20-30 years long? I didn't either."
+      alrHappened = true;
+    }
+    
     messages.appendChild(botDiv);
 
     // Scroll to the bottom
     messages.scrollTop = messages.scrollHeight;
-  }, 1000);
+  }, 700);
 }
   </script>
 
