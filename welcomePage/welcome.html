@@ -8,14 +8,20 @@
   <!--<script src="welcome.js"></script>-->
 </head>
 <body>
-  <div id="wrapperLarge">
-    <div id="largeText">
-        This is Alex, the big brown grizzly bear. The wisest, kindest bear ready to listen and support. Alex does not judge and only offeres support, he is here to help. Most of all! Alex is not a rat, you are safe here. Please ask him anything on your mind, and he will try his very best!
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>Welcome to Safe Cave</h2>
+      <p> This is Alex, the big brown grizzly bear. The wisest, kindest bear ready to listen and support. 
+        Alex does not judge and only offeres support, he is here to help. Most of all! Alex is not a rat, you are safe here. 
+        Please ask him anything on your mind, and he will try his very best to be supportive and helpful!
+      </p>
+      <button class="close-popup" id="close-popup">I Understand</button>
     </div>
   </div>
   <div id="space"></div>
     <div id="input-area">
-      <input type="text" id="input" placeholder="Type your message">
+      <input type="text" id="input" placeholder="Ask Alex anything">
       <button onclick="sendMessage()">Send</button>
     </div>
 
@@ -24,6 +30,20 @@
   </div>
 
   <script>
+
+const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('close-popup');
+
+    // Function to show the popup
+    window.onload = function() {
+      popup.style.display = 'block';
+    };
+
+    // Function to hide the popup when the close button is clicked
+    closePopup.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+
     const messages = document.getElementById('messages');
 
 function sendMessage() {
