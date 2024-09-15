@@ -1,5 +1,5 @@
 # CC-CSUEB-HACKS-2024
-**IDEAS FOR PROJECT**
+**IDEAS FOR PROJECT**:
 Chat Box that asks how you’re doing ✅
 Provides breathing exercises and words of affirmation for anxiety (✅ sorta)
 Provides support 
