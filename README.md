@@ -1,3 +1,6 @@
+any comments with "-B" are parts of the code I directly implemented other parts may be AI written/ help from AI, maybe with some edits from me.
+Mostly used this time to learn new coding topics and ideas through AI and make up in time and members with AI. So a good chunk of this was written by AI, however I still learned a lot through AI such as creating variables in JS, calling and creating functions in JS, and conditional statements in JS. I also learned a lot about postiioning, flex, grid, hover effects, background rgba, blur effects, and dynamic responsiveness. HTML I mostly already knew, but I did learn to use div nesting a lot better. Overall this was really fun.
+
 # CC-CSUEB-HACKS-2024
 **IDEAS FOR PROJECT**:
 Chat Box that asks how you’re doing ✅
